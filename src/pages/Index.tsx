@@ -74,7 +74,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0f0f0f]/90 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <span style={{ fontFamily: "'Oswald', sans-serif" }} className="text-xl tracking-widest text-white">
-            МОТО<span className="text-[#E8570A]">СЕРВИС</span>
+            THE WRENCH<span className="text-[#E8570A]"> HOUSE</span>
           </span>
 
           <ul className="hidden md:flex gap-8">
@@ -129,6 +129,7 @@ const Index = () => {
           </div>
         )}
       </nav>
+
 
       {/* ── HERO ── */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
@@ -403,10 +404,10 @@ const Index = () => {
       <footer className="bg-[#080808] border-t border-white/5 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <span style={{ fontFamily: "'Oswald', sans-serif" }} className="text-lg tracking-widest">
-            МОТО<span className="text-[#E8570A]">СЕРВИС</span>
+            THE WRENCH<span className="text-[#E8570A]"> HOUSE</span>
           </span>
           <span className="text-white/20 text-xs">
-            © 2026 МотоСервис. Все права защищены.
+            © 2026 The Wrench House. Все права защищены.
           </span>
           <div className="flex gap-6">
             {NAV_LINKS.map((l) => (

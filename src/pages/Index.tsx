@@ -7,8 +7,28 @@ const DIAG_IMG = "https://cdn.poehali.dev/projects/c5fbc9e2-9feb-4554-a2f4-b4143
 const NAV_LINKS = [
   { label: "Главная", href: "#home" },
   { label: "Услуги", href: "#services" },
+  { label: "Прайс", href: "#price" },
   { label: "О нас", href: "#about" },
   { label: "Контакты", href: "#contacts" },
+];
+
+const PRICE_LIST = [
+  { name: "Комплексное техническое обслуживание", price: "от 2 999 ₽" },
+  { name: "Замена масла в двигателе", price: "от 499 ₽" },
+  { name: "Замена масла в вилке", price: "от 499 ₽" },
+  { name: "Регулировка карбюратора", price: "от 999 ₽" },
+  { name: "Регулировка клапанов", price: "от 999 ₽" },
+  { name: "Синхронизация карбюраторов", price: "от 1 499 ₽" },
+  { name: "Замена свечи зажигания", price: "99 ₽/шт" },
+  { name: "Натяжка цепи", price: "от 499 ₽" },
+  { name: "Чистка цепи", price: "299 ₽" },
+  { name: "Смазка цепи", price: "399 ₽" },
+  { name: "Чистка воздушного фильтра", price: "199 ₽" },
+  { name: "Пропитка воздушного фильтра", price: "99 ₽" },
+  { name: "Сборка, промазка мотоцикла с коробки", price: "от 2 499 ₽" },
+  { name: "Замена звёзд", price: "от 399 ₽" },
+  { name: "Замена цепи", price: "от 399 ₽" },
+  { name: "Регулировка подвески", price: "от 499 ₽" },
 ];
 
 const SERVICES = [
@@ -245,8 +265,50 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── PRICE ── */}
+      <section id="price" className="py-24 bg-[#111111]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-[1px] w-10 bg-[#E8570A]" />
+            <span className="text-[#E8570A] text-xs tracking-[0.25em] uppercase">Стоимость работ</span>
+          </div>
+          <h2 style={{ fontFamily: "'Oswald', sans-serif" }} className="text-4xl md:text-5xl font-bold mb-3">
+            ПРАЙС-ЛИСТ
+          </h2>
+          <p className="text-white/40 mb-12 font-light">
+            Техническое обслуживание · Цены указаны без учёта стоимости запчастей
+          </p>
+
+          <div className="border border-white/5 divide-y divide-white/5">
+            {PRICE_LIST.map((item, i) => (
+              <div
+                key={i}
+                className={`flex items-center justify-between px-6 py-4 hover:bg-white/[0.03] transition-colors duration-200 ${i === 0 ? "bg-[#E8570A]/10 border-l-2 border-l-[#E8570A]" : ""}`}
+              >
+                <div className="flex items-center gap-3">
+                  {i === 0 && <Icon name="Star" size={14} className="text-[#E8570A] shrink-0" />}
+                  <span className={`text-sm ${i === 0 ? "text-white font-medium" : "text-white/70"}`}>
+                    {item.name}
+                  </span>
+                </div>
+                <span
+                  style={{ fontFamily: "'Oswald', sans-serif" }}
+                  className={`text-sm tracking-wide shrink-0 ml-8 ${i === 0 ? "text-[#E8570A]" : "text-white/90"}`}
+                >
+                  {item.price}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-white/25 text-xs mt-6 font-light">
+            * Окончательная стоимость определяется после диагностики. Запчасти оплачиваются отдельно.
+          </p>
+        </div>
+      </section>
+
       {/* ── ABOUT ── */}
-      <section id="about" className="py-24 bg-[#111111]">
+      <section id="about" className="py-24 bg-[#0f0f0f]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">

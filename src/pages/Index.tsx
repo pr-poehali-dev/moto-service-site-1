@@ -12,6 +12,12 @@ const NAV_LINKS = [
   { label: "Контакты", href: "#contacts" },
 ];
 
+const PRICE_SUSPENSION = [
+  { name: "Диагностика", price: "от 999 ₽" },
+  { name: "Ремонт подвески", price: "от 1 299 ₽" },
+  { name: "Ремонт рамы (сварка, порошковая покраска)", price: "от 3 999 ₽" },
+];
+
 const PRICE_BRAKES = [
   { name: "Замена тормозной жидкости", price: "от 499 ₽" },
   { name: "Замена колодок", price: "от 399 ₽/пара" },
@@ -345,6 +351,32 @@ const Index = () => {
           </div>
           <div className="border border-white/5 divide-y divide-white/5">
             {PRICE_ELECTRICS.map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.03] transition-colors duration-200"
+              >
+                <span className="text-sm text-white/70">{item.name}</span>
+                <span
+                  style={{ fontFamily: "'Oswald', sans-serif" }}
+                  className="text-sm tracking-wide shrink-0 ml-8 text-white/90"
+                >
+                  {item.price}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Подвеска и рулевое */}
+          <div className="flex items-center gap-3 mt-14 mb-6">
+            <div className="w-8 h-8 border border-[#E8570A]/30 flex items-center justify-center">
+              <Icon name="Gauge" size={15} className="text-[#E8570A]" />
+            </div>
+            <h3 style={{ fontFamily: "'Oswald', sans-serif" }} className="text-2xl font-bold tracking-wide">
+              ПОДВЕСКА И РУЛЕВОЕ
+            </h3>
+          </div>
+          <div className="border border-white/5 divide-y divide-white/5">
+            {PRICE_SUSPENSION.map((item, i) => (
               <div
                 key={i}
                 className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.03] transition-colors duration-200"

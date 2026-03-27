@@ -91,12 +91,12 @@ const Index = () => {
           </ul>
 
           <a
-            href="tel:+79001234567"
+            href="tel:+79202282493"
             className="hidden md:flex items-center gap-2 bg-[#E8570A] hover:bg-[#c94608] text-white px-4 py-2 text-sm transition-colors duration-200"
             style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: "0.1em" }}
           >
             <Icon name="Phone" size={14} />
-            +7 (900) 123-45-67
+            +7 (920) 228-24-93
           </a>
 
           <button
@@ -119,12 +119,12 @@ const Index = () => {
               </button>
             ))}
             <a
-              href="tel:+79001234567"
+              href="tel:+79202282493"
               className="flex items-center gap-2 bg-[#E8570A] text-white px-4 py-2 text-sm w-fit"
               style={{ fontFamily: "'Oswald', sans-serif" }}
             >
               <Icon name="Phone" size={14} />
-              +7 (900) 123-45-67
+              +7 (920) 228-24-93
             </a>
           </div>
         )}
@@ -326,8 +326,8 @@ const Index = () => {
 
               <div className="space-y-6">
                 {[
-                  { icon: "Phone", label: "Телефон", value: "+7 (900) 123-45-67", href: "tel:+79001234567" },
-                  { icon: "MessageCircle", label: "WhatsApp / Telegram", value: "+7 (900) 123-45-67", href: "#" },
+                  { icon: "Phone", label: "Телефон", value: "+7 (920) 228-24-93", href: "tel:+79202282493" },
+                  { icon: "MessageCircle", label: "WhatsApp / Telegram", value: "+7 (920) 228-24-93", href: "#" },
                   { icon: "MapPin", label: "Адрес", value: "г. Москва, ул. Примерная, 42", href: "" },
                   { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 9:00–20:00", href: "" },
                 ].map((c, i) => (

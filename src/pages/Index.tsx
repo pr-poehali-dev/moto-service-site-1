@@ -328,7 +328,7 @@ const Index = () => {
                 {[
                   { icon: "Phone", label: "Телефон", value: "+7 (920) 228-24-93", href: "tel:+79202282493" },
                   { icon: "MessageCircle", label: "WhatsApp / Telegram", value: "+7 (920) 228-24-93", href: "#" },
-                  { icon: "MapPin", label: "Адрес", value: "г. Воронеж, ул. Столярная, 2б", href: "" },
+                  { icon: "MapPin", label: "Адрес", value: "г. Воронеж, ул. Столярная, 2б", href: "https://yandex.ru/maps/?text=Воронеж+ул.+Столярная+2б" },
                   { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 9:00–20:00", href: "" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-4 group">
@@ -338,7 +338,7 @@ const Index = () => {
                     <div>
                       <div className="text-white/30 text-xs uppercase tracking-wider mb-1">{c.label}</div>
                       {c.href ? (
-                        <a href={c.href} className="text-white hover:text-[#E8570A] transition-colors">{c.value}</a>
+                        <a href={c.href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#E8570A] transition-colors">{c.value}</a>
                       ) : (
                         <span className="text-white">{c.value}</span>
                       )}

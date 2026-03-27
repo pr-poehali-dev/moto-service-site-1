@@ -328,7 +328,7 @@ const Index = () => {
                 {[
                   { icon: "Phone", label: "Телефон", value: "+7 (920) 228-24-93", href: "tel:+79202282493" },
                   { icon: "MessageCircle", label: "WhatsApp / Telegram", value: "+7 (920) 228-24-93", href: "#" },
-                  { icon: "MapPin", label: "Адрес", value: "г. Москва, ул. Примерная, 42", href: "" },
+                  { icon: "MapPin", label: "Адрес", value: "г. Воронеж, ул. Столярная, 2б", href: "" },
                   { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 9:00–20:00", href: "" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-4 group">
